@@ -1,0 +1,35 @@
+2022-11-23 20:24:43,844 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2022-11-23 20:24:43,845 INFO com.heaven.propertymanagement.PropertyManagementApplication [restartedMain] Starting PropertyManagementApplication using Java 17.0.4.1 on MacBook-Air-cua-Mai.local with PID 4472 (/Users/quangminh/Documents/Backend/SpringBoot/SpringBoot-JPA-Mastery/property-management/target/classes started by quangminh in /Users/quangminh/Documents/Backend/SpringBoot/SpringBoot-JPA-Mastery/property-management)
+2022-11-23 20:24:43,846 INFO com.heaven.propertymanagement.PropertyManagementApplication [restartedMain] The following 1 profile is active: "dev"
+2022-11-23 20:24:43,874 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-23 20:24:43,874 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-23 20:24:44,265 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-23 20:24:44,295 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2022-11-23 20:24:44,630 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-11-23 20:24:44,635 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-11-23 20:24:44,635 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-11-23 20:24:44,635 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-23 20:24:44,671 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-11-23 20:24:44,671 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 796 ms
+2022-11-23 20:24:44,690 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-11-23 20:24:44,830 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-11-23 20:24:44,836 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/jpa_zero_hero?useSSL=false&serverTimezone=UTC'
+2022-11-23 20:24:44,901 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-23 20:24:44,928 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-23 20:24:45,017 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-23 20:24:45,082 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-23 20:24:45,483 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-23 20:24:45,487 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 20:24:45,689 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-23 20:24:45,876 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-11-23 20:24:45,888 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-11-23 20:24:45,900 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-23 20:24:45,908 INFO com.heaven.propertymanagement.PropertyManagementApplication [restartedMain] Started PropertyManagementApplication in 2.277 seconds (JVM running for 2.727)
+2022-11-23 20:25:34,545 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-23 20:25:34,545 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-11-23 20:25:34,548 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2022-11-23 20:25:34,652 INFO com.heaven.propertymanagement.exception.CustomExceptionHandler [http-nio-8080-exec-1] Inside field validation ownerEmail - Email is mandatory
+2022-11-23 20:25:34,671 WARN org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.heaven.propertymanagement.controller.UserController.saveUser(com.heaven.propertymanagement.dto.UserDTO): [Field error in object 'userDTO' on field 'ownerEmail': rejected value [null]; codes [NotBlank.userDTO.ownerEmail,NotBlank.ownerEmail,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDTO.ownerEmail,ownerEmail]; arguments []; default message [ownerEmail]]; default message [Email is mandatory]] ]
+2022-11-23 20:29:06,654 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-23 20:29:06,657 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-11-23 20:29:06,665 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
