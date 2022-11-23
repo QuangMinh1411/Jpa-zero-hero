@@ -29,8 +29,8 @@ public class PropertyController {
     public ResponseEntity<?> getAllProperties(){
         System.out.println(dummy);
         List<PropertyDTO> propertyList = propertyService.getAllProperties();
-        ResponseEntity<List<PropertyDTO>> responseEntity = new ResponseEntity<>(propertyList,HttpStatus.OK);
-        return responseEntity;
+        return new ResponseEntity<>(propertyList,HttpStatus.OK);
+
     }
     @PutMapping("/properties/{id}")
     public ResponseEntity<?> updateProperty(@RequestBody PropertyDTO propertyDTO,@PathVariable("id") Long id){
