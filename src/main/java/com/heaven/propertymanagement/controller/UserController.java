@@ -2,6 +2,9 @@ package com.heaven.propertymanagement.controller;
 
 import com.heaven.propertymanagement.dto.UserDTO;
 import com.heaven.propertymanagement.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,14 +17,20 @@ import javax.validation.Valid;
 public class UserController {
     @Autowired
     private UserService userService;
-
+    @ApiOperation(value = "register",notes = "this method is used for registration")
     @PostMapping("/register")
-    public ResponseEntity<?> saveUser(@Valid @RequestBody UserDTO userDTO){
+    public ResponseEntity<?> saveUser(@ApiParam(
+            name = "userDTO",
+            type = "userDTO",
+            example = "user information",
+            required = true
+    )
+            @Valid @RequestBody UserDTO userDTO){
         userDTO = userService.register(userDTO);
         return new ResponseEntity<>(userDTO, HttpStatus.CREATED);
     }
 
-    @PostMapping("/login")
+    @PostMapping(value = "/login",consumes = {"application/json"},produces = {"application/json"})
     public ResponseEntity<UserDTO> login(@Valid @RequestBody UserDTO userDTO){
         userDTO = userService.login(userDTO.getOwnerEmail(),userDTO.getPassword());
         return new ResponseEntity<>(userDTO,HttpStatus.OK);
